@@ -1,0 +1,32 @@
+import remiseras.*
+import clientas.*
+
+describe "Test sobre Lucia"{
+	test "No se puede reemplazar a si misma" {
+
+	assert.throwsExceptionWithMessage(
+	        "No se puede reemplazar a si misma",
+	        {lucia.estaReemplazando(lucia)}
+	        )
+
+   }
+   test "Reemplazar a otra remisera"{
+   	  assert.doesNotThrowException(
+   		 {lucia.estaReemplazando(roxana)}
+   	)
+   		
+   	
+   }
+   
+   test "Reemplazo de Roxana"{
+   	    lucia.estaReemplazando(roxana)
+   	   	assert.equals(180, lucia.precioViaje(ludmila,10))
+   	
+   }
+   
+   
+   
+   
+}
+
+
